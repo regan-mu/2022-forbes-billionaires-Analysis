@@ -19,6 +19,36 @@ container = st.container()
 with container:
     st.title("Forbes 2022 Billionaire List Analysis".upper())
 
+# Row 0
+st.subheader("Age Distribution")
+trace = go.Histogram(
+    x=clean_df["Age"],
+    marker=dict(color="#007F8E"),
+    xbins=dict(start=10, end=100, size=10)
+)
+layout = dict(
+    title=dict(
+        text="Billionaire Age Distribution",
+        font=dict(color="#9C9C9C")
+    ),
+    xaxis=dict(
+        title="Age",
+        color="#9C9C9C"
+    ),
+    yaxis=dict(
+        title="Count",
+        color="#9C9C9C"
+    ),
+    paper_bgcolor="#F5F5F5",
+    plot_bgcolor="#F5F5F5",
+    margin=dict(l=100, r=100),
+    width=1120,
+    height=400
+)
+fig = go.Figure(data=[trace], layout=layout)
+st.plotly_chart(fig)
+st.write("Most Billionaires are above 50 years old.")
+
 # Row 1
 tab1, tab2 = st.columns(2, gap="large")
 with tab1:
@@ -171,6 +201,7 @@ with container2:
         height=400
     )
     st.plotly_chart(fig)
+
 
 st.subheader("Conclusion")
 st.write("In conclusion, this EDA project on the World's Richest People 2022 as listed by Forbes provides "

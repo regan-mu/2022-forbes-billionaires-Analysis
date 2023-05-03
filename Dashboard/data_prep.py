@@ -10,7 +10,7 @@ st.set_page_config(
     menu_items={'Get Help': "mailto:regansomi@gmail.com"},
     initial_sidebar_state="collapsed"
 )
-df = pd.read_csv("../forbes_billionaires_2022.csv")
+df = pd.read_csv("./forbes_billionaires_2022.csv")
 
 
 @st.cache_data
@@ -46,6 +46,7 @@ female_by_country["Percentage"] = round((female_by_country["Female Billionaires"
 
 # Combine the countries and females by country dataframes
 combined = countries.merge(female_by_country, on="Country", how="left")
+combined.fillna(value=0, inplace=True)
 combined.isnull().sum()
 
 
