@@ -5,5 +5,8 @@ The project will also explore the source of wealth for the world's richest peopl
 The dataset for this project was downloaded from [kaggle](https://www.kaggle.com/datasets/prasertk/forbes-worlds-billionaires-list-2022)
 
 I created a dashboard to present the findings for the Analysis.
+
 ## Screenshots
+
 ![Screenshot](./view.jpg)
+![Screenshot](./view2.png)
