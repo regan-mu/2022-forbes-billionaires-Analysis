@@ -3,13 +3,6 @@ import streamlit as st
 import pandas as pd
 
 
-st.set_page_config(
-    page_title="2022 Forbes Billionaires Analysis",
-    page_icon="random",
-    layout="wide",
-    menu_items={'Get Help': "mailto:regansomi@gmail.com"},
-    initial_sidebar_state="collapsed"
-)
 df = pd.read_csv("./forbes_billionaires_2022.csv")
 
 
