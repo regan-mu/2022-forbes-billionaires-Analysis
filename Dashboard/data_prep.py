@@ -1,9 +1,12 @@
 import numpy as np
 import streamlit as st
 import pandas as pd
+import os
 
 
-df = pd.read_csv("./forbes_2022_billionaires.csv")
+app_path = os.path.dirname(__file__)
+path = os.path.join(app_path, "forbes_2022_billionaires.csv")
+df = pd.read_csv(path)
 
 
 @st.cache_data
