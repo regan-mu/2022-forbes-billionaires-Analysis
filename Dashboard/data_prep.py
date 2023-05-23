@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 
-df = pd.read_csv("../Datasets/forbes_2022_billionaires.csv")
+df = pd.read_csv("..\\Datasets\\forbes_2022_billionaires.csv")
 
 
 @st.cache_data
